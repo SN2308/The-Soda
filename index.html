@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="lo">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Soda – ລະບົບຂາຍໜ້າຮ້ານ</title>
+<link href="https://fonts.googleapis.com/css2?family=Creepster&family=Kanit:wght@400;600&family=Noto+Sans+Lao:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="ghosts" aria-hidden="true"><span style="--x:5%;--s:2.4rem;--d:22s;--t:-4s">👻</span><span style="--x:16%;--s:3.4rem;--d:28s;--t:-14s">👻</span><span style="--x:29%;--s:2.2rem;--d:19s;--t:-9s">👻</span><span style="--x:43%;--s:4rem;--d:30s;--t:-21s">👻</span><span style="--x:57%;--s:2.6rem;--d:21s;--t:-2s">👻</span><span style="--x:70%;--s:3.2rem;--d:26s;--t:-17s">👻</span><span style="--x:83%;--s:2.4rem;--d:18s;--t:-11s">👻</span><span style="--x:93%;--s:3.6rem;--d:29s;--t:-6s">👻</span></div>
+<div id="lock">
+  <h1 class="logo" style="font-size:3.6rem">🎃 The Soda</h1>
+  <p style="color:var(--mute);margin:0">Websiteຂາຍໜ້າຮ້ານ ໃສ່ລະຫັດເພື່ອເຂົ້າໄປໃຊ້ງານ</p>
+  <input id="pin" type="password" inputmode="numeric" maxlength="8" aria-label="ລະຫັດເຂົ້າສູ່ລະບົບ" autocomplete="off">
+  <button class="go" id="pinGo">ເຂົ້າສູ່ລະບົບ</button>
+  <p id="pinErr" class="x" style="margin:0;min-height:1.4em"></p>
+</div>
+
+<header>
+  <h1 class="logo">🦇 The Soda</h1>
+<div class="hdeco" aria-hidden="true"><span>🦇</span><span>👻</span><span>🎃</span></div>
+</header>
+
+<main>
+  <section>
+    <h2>ເລືອກເຄື່ອງດື່ມ</h2>
+    <div class="tg"><button id="tgShot" aria-pressed="false"></button></div>
+    <div class="tg" id="tabs"><button data-tab="main" class="on">🥤 Soda</button>
+        <button data-tab="special">⭐ Special Soda</button>
+        <button data-tab="secret">🔮 Secret Soda</button></div>
+    <div class="menu" id="menu"></div>
+  </section>
+
+  <section>
+    <h2>ຍອດລວມຕອນນີ້</h2>
+    <div id="cart"></div>
+    <div class="total"><span>ລວມ</span><span id="cartTotal">0 ກີບ</span></div>
+    <div class="pay">
+      <button data-pay="cash" class="on">💵 ເງິນສົດ</button>
+      <button data-pay="transfer">📱 ເງິນໂອນ</button>
+    </div>
+    <button class="go" id="sell" disabled>ບັນທຶກການຂາຍ</button>
+    <button class="link" id="clear">ລ້າງບິນ</button>
+  </section>
+
+  <section class="full">
+    <h2>ສະຫຼຸບຍອດຂາຍ</h2>
+    <div class="datebar">
+      <label for="vd">ເບິ່ງວັນທີ່</label><input type="date" id="vd">
+      <button class="link" id="today">ກັບໄປມື້ນີ້</button>
+    </div>
+    <div class="stats">
+      <div class="stat all"><small id="allLbl">ຍອດຂາຍມື້ນີ້</small><b id="sAll">0 ກີບ</b></div>
+      <div class="stat cash"><small>ເງິນສົດທີ່ໄດ້ຮັບ</small><b id="sCash">0 ກີບ</b></div>
+      <div class="stat tr"><small>ຍອດເງິນໂອນ</small><b id="sTr">0 ກີບ</b></div>
+      <div class="stat"><small>ຈຳນວນບິນ</small><b id="sBills">0</b></div>
+      <div class="stat"><small>ຈຳນວນແກ້ວ</small><b id="sCups">0</b></div>
+      <div class="stat"><small>Shot Soju</small><b id="sShots">0</b></div>
+    </div>
+    <div class="cols">
+      <div><h2>ເມນູທີ່ຂາຍໄດ້</h2><div id="sold"></div></div>
+      <div><h2>ລາຍການຂາຍລ່າສຸດ <span class="live">🕒 <b id="time">--:--:--</b> <small id="date"></small></span></h2><div id="log"></div></div>
+    </div>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
